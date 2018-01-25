@@ -1,6 +1,9 @@
 let AWS = require('aws-sdk');
-exports.handler = function(event, context, callback) {
+const ddb = new AWS.DynamoDB.DocumentClient();
+let SL = require('@slappforge/slappforge-sdk');
+const sqs = new SL.AWS.SQS(AWS);
+exports.handler = function (event, context, callback) {
 
 
-	callback(null,'Successfully executed');
+	callback(null, 'Successfully executed');
 }
